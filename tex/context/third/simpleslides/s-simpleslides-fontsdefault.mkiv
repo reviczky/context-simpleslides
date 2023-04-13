@@ -1,6 +1,6 @@
 %D \module
 %D   [      file=simpleslides-f-default,
-%D        version=2009.03.30
+%D        version=2023.04.13
 %D          title=\CONTEXT\ Style File,
 %D       subtitle=Presentation Module simpleslides --- Default font setup,
 %D         author=Aditya Mahajan and Thomas A. Schmitz,
@@ -8,6 +8,7 @@
 %D      copyright={Aditya Mahajan and Thomas A. Schmitz}]
 %C
 %C Copyright 2007 Aditya Mahajan and Thomas A. Schmitz
+%C Maintained by Henning Hraban Ramm since 2022.
 %C This file may be distributed under the GNU General Public License v. 2.0.
 
 \writestatus{simpleslides}{loading default font setup}
@@ -71,10 +72,10 @@
 %D Adventor (the TeXGyre clone of Gothic), Schola (the TeXGyre clone of
 %D Schoolbook), Bonum (the TeXGyre clone of Bookman), Termes (the TeXGyre clone
 %D of Times), Pagella (the TeXGyre clone of Palatino), Heros (the TeXGyre clone
-%D of Helvetica), and Chancery (the TeXGyre clone of Chancery). Since the
-%D definition of typescripts etc. varies according to the \TeX-engine used, we
-%D have to branch the code here. This is awkward, but for the time being, I see
-%D no other way.
+%D of Helvetica), Chancery (the TeXGyre clone of Chancery), and IBM Plex(Sans). 
+%D Since the definition of typescripts etc. varies according to the \TeX-engine
+%D used, we have to branch the code here. This is awkward, but for the time being,
+%D I see no other way.
 
 \startsetups simpleslides:font:LatinModern
 \setupbodyfont[\NormalSize]
@@ -84,7 +85,7 @@
 \setupbodyfont[ss,\NormalSize]
 \stopsetups
 
-\usetypescriptfile[type-otf] %Isn't this included by default?
+%\usetypescriptfile[type-otf] %Isn't this included by default?
 
 %AM: For all the fonts, I have used traditional names rather than TeX Gyre
 %names.
@@ -169,7 +170,11 @@
 \stopsetups
 
 \startsetups simpleslides:font:Plex
-\setupbodyfont[plex,\NormalSize]
+  \setupbodyfont[plex,\NormalSize]
+\stopsetups
+
+\startsetups simpleslides:font:PlexSans
+  \setupbodyfont[plex,ss,\NormalSize]
 \stopsetups
 
 \doifsetupselse{simpleslides:font:\moduleparameter{simpleslides}{font}}
