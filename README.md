@@ -169,3 +169,30 @@ To update, run `git pull` and `mtxrun --generate` again.
 
 \stoptext
 ```
+
+## Using different fonts
+
+The module contains setups for some frequently used fonts, but it wouldn’t make sense
+to include more. You can easily add your own:
+
+```
+\startsetups simpleslides:font:Antykwa
+  \setupbodyfont[antykwa,16pt]
+\stopsetups
+
+\usemodule[simpleslides][
+  style=Swoosh,
+  font=Antykwa,
+  size=16pt,
+]
+```
+
+That means, include a setup with a name like `simpleslides:font:Fontname`
+before you load the module and then set `fonr=Fontname`.
+
+Unfortunately, you must define the base font size twice.
+
+
+## Your own design
+
+Copy and adapt the well documented template: `doc/context/third/simpleslides/solutions/style-template.tex`.
