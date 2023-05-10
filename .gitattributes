@@ -1,0 +1,9 @@
+*.pdf binary -diff -text
+*.png binary -diff -text
+*.jpg binary -diff -text
+*.svg binary -diff -text
+.git* export-ignore
+LICENSE export-ignore
+README* export-ignore
+tests export-ignore
+
